@@ -1,0 +1,289 @@
+:root {
+    --pri-gradient-active: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
+    --red-input-error: hsl(0, 100%, 66%);
+
+    --neu-white: hsl(0, 0%, 100%);
+    --neu-LGV: hsl(270, 3%, 87%);
+    --neu-DGV: hsl(279, 6%, 55%);
+    --neu-VDV: hsl(278, 68%, 11%);
+
+    --fz: 18px;
+    --ff: 'Space Grotesk', serif;
+    --fw: 500;
+}
+
+
+* {
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+svg,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+
+input {
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/*******
+Genral Styling
+******/
+
+
+.attribution {
+    font-size: 1rem;
+    text-align: center;
+}
+
+body {
+    font-family: var(--ff);
+    font-weight: var(--fw);
+    font-size: var(--fz);
+}
+
+.wrapper{
+    min-width: 375px;
+    max-width: 400px;
+}
+
+
+.bg-image {
+    position: relative;
+}
+
+
+
+
+
+
+/**********
+Span And Input 
+**********/
+.card-cont span {
+    font-size: .7rem;
+    color: var(--neu-VDV);
+    letter-spacing: 2px;
+    margin-bottom: .5rem;
+}
+
+input {
+    border-radius: .555rem;
+    border: 1px solid var(--neu-LGV);
+    padding: 1rem .5rem;
+    margin-bottom: .8rem;
+}
+
+
+
+
+/******
+CARD DETAILS
+******/
+.card-details {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 1.5rem;
+    margin-top: 4rem;
+}
+
+
+
+/*******
+EXP CVC DIV
+*******/
+.card-flex-div {
+    display: flex;
+}
+
+.EXP {
+    width: 4rem;
+}
+
+
+
+/*******
+CONFIRM BTN
+*******/
+.btn {
+    color: var(--neu-white);
+    font-family: var(--ff);
+    background-color: var(--neu-VDV);
+    padding: .7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: .455rem;
+}
+
+
+
+.number-input-wrong{
+    font-size: .8rem;
+    color:var(--red-input-error);
+    display: none;
+}
+
+.date-empty{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/***********
+Front-Card-Image-Div
+***********/
+.front-image-div{
+    width: 447px;
+    height: 245px;
+    transform: scale(.688);
+
+    background: url(./images/bg-card-front.png);
+
+    position: absolute;
+    top: 5rem;
+    left: -3em;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    padding: 1rem;
+    color: var(--neu-white);
+}
+
+/*********/
+.logo{
+    width: 5rem;
+}
+
+.card-number{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-top: 2rem;
+
+}
+
+/*******/
+.flex-div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+/***********
+Back-Card-Image-Div
+***********/
+.back-image-div{
+
+    width: 447px;
+    height: 245px;
+
+    transform: scale(.678);
+
+    position: absolute;
+    top: -1rem;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+
+    background: url(images/bg-card-back.png);
+    color: var(--neu-white);
+
+}
+/********/
+.card-cvc{
+    margin-right: 3rem;
+}
+
+
+
+@media (min-width:1200px) {
+    .wrapper {
+        max-width: 2000px;
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    .card-img-div {
+        grid-column: 1;
+
+    }
+
+    picture img {
+        height: 100vh;
+    }
+
+
+
+
+/***********
+Front-Card-Image-Div
+***********/
+.front-image-div{
+
+    transform: scale(.9);
+    top: 8rem;
+    left: 8rem;
+}
+
+
+/***********
+Back-Card-Image-Div
+***********/
+.back-image-div{
+transform: scale(.9);
+    top: 23rem;
+    left: 12rem;
+}
+
+
+/***********
+Card-Details
+***********/
+    .card-cont {
+        display: grid;
+        place-content: center;
+        margin-left: 10rem;
+    }
+
+    .card-cont span {
+        margin-bottom: .5rem;
+    }
+
+    input {
+        padding: 1rem .5rem;
+        margin-bottom: 1rem;
+    }
+
+
+    .card-flex-div div {
+        margin-inline: .5rem;
+    }
+
+
+}
